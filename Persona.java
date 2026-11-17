@@ -1,0 +1,43 @@
+package co.edu.uniquindio.cineuq.proyectofinalprogramacion1cineuq.model;
+
+import java.io.Serializable;
+/**
+ * Clase base abstracta para toda persona del sistema (clientes y empleados).
+ */
+public abstract class Persona implements Serializable {
+
+    // Versión de la clase para guardarla en archivo (persistencia)
+    private static final long serialVersionUID = 1L;
+
+    private String identificacion;
+    private String nombre;
+
+    public Persona(String identificacion, String nombre) {
+        this.identificacion = identificacion;
+        this.nombre = nombre;
+    }
+
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{"
+                + "identificacion='" + identificacion + "'"
+                + ", nombre='" + nombre + "'"
+                + "}";
+    }
+}
